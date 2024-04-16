@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* > * {
+  font-family: "Onest", "Poppins";
+}
+.mv-wrapper {
+  @apply container mx-auto px-8 max-w-[960px];
+}
+section {
+  @apply pt-16 pb-4;
+}
+.mv-description-list li {
+  @apply hidden;
+}
+.mv-list-labels label {
+  @apply transition-all duration-300;
+}
+.mv-description-list li {
+  @apply text-lg text-slate-600;
+}
+#choose:checked ~ .mv-description-list .choose-description,
+#code:checked ~ .mv-description-list .code-description,
+#submit:checked ~ .mv-description-list .submit-description,
+#certify:checked ~ .mv-description-list .certify-description {
+  @apply block;
+}
+#choose:checked ~ .mv-list-labels .choose-label label,
+#code:checked ~ .mv-list-labels .code-label label,
+#submit:checked ~ .mv-list-labels .submit-label label,
+#certify:checked ~ .mv-list-labels .certify-label label {
+  @apply bg-blue-500 text-slate-100 border-blue-600;
+}

@@ -1,16 +1,103 @@
 ---
-
+import SimpleLayout from "../layouts/SimpleLayout.astro";
+import jumbotron from "../assets/img/jumbotron.jpg";
+import { Image } from "astro:assets";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<SimpleLayout>
+  <section>
+    <article class="grid grid-cols-2 gap-4 mv-wrapper">
+      <div class="flex flex-col justify-center items-start">
+        <h2 class="text-3xl font-semibold mb-4">
+          Improve your coding skills by building realistic projects
+        </h2>
+        <p class="text-slate-700 mb-8">
+          Our professionally designed challenges help you gain hands-on
+          experience writing HTML, CSS, and JavaScript. We create the designs so
+          you can focus on the code and see your skills skyrocket!
+        </p>
+        <a href="" class="bg-slate-950 py-2 px-4 rounded text-teal-50 font-semibold text-sm"
+          >Login with Github</a
+        >
+      </div>
+      <figure class="rounded shadow-lg shadow-slate-300/50 overflow-hidden">
+        <Image
+          src={jumbotron}
+          loading="lazy"
+          ,
+          height={300}
+          width={500}
+          alt="notebook"
+        />
+      </figure>
+    </article>
+  </section>
+  <section>
+    <h2 class="mv-wrapper text-2xl font-semibold mb-4">How it works</h2>
+    <article class="grid grid-cols-2 gap-4 mv-wrapper">
+      <input type="radio" hidden id="choose" checked name="options"/>
+      <input type="radio" hidden id="code" name="options"/>
+      <input type="radio" hidden id="submit" name="options"/>
+      <input type="radio" hidden id="certify" name="options"/>
+      <ul class="flex flex-col space-y-4 items-center justify-between mv-list-labels">
+        <li class="w-full choose-label">
+          <label
+            for="choose"
+            class="py-2 border-2 bg-slate-100 border-slate-200 w-full block rounded px-4  cursor-pointer"
+            ><span>1</span> Choose your challenge</label
+          >
+        </li>
+        <li class="w-full code-label">
+          <label
+            for="code"
+            class="py-2 border-2 bg-slate-100 border-slate-200 w-full block rounded px-4  cursor-pointer"
+            ><span>2</span> Code the design</label
+          >
+        </li>
+        <li class="w-full submit-label">
+          <label
+            for="submit"
+            class="py-2 border-2 bg-slate-100 border-slate-200 w-full block rounded px-4  cursor-pointer"
+            ><span>3</span> Submit your solution</label
+          >
+        </li>
+        <li class="w-full certify-label">
+          <label
+            for="certify"
+            class="py-2 border-2 bg-slate-100 border-slate-200 w-full block rounded px-4  cursor-pointer"
+            ><span>4</span> Get your certify</label
+          >
+        </li>
+      </ul>
+	  
+      <ul class="mv-description-list">
+        <li class="choose-description">
+          <p>
+            Browse our collection of professionally designed projects. Pick one
+            that suits the level you’re currently at.
+          </p>
+        </li>
+
+        <li class="code-description">
+          <p>
+            Each project comes with all files included. This means you can focus
+            on coding the project using the design as a reference.
+          </p>
+        </li>
+
+        <li class="submit-description">
+          <p>
+            Get feedback from the community about your code and see how close
+            you got to the design.
+          </p>
+        </li>
+
+        <li class="certify-description">
+          <p>
+            For each challenge that you complete, you'll get a certification
+          </p>
+        </li>
+      </ul>
+    </article>
+  </section>
+</SimpleLayout>
