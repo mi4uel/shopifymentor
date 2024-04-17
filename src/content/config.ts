@@ -7,12 +7,13 @@ const challengesCollection = defineCollection({
       title: z.string(),
       pubDate: z.date(),
       description: z.string(),
-      author: z.string(),
+      level: z.number(),
       image: z.object({
         url: z.string(),
         alt: z.string()
       }),
-      tags: z.array(z.string())
+      tags: z.array(z.string()),
+      stack: z.array(z.string()),
     })
 });
 // Export a single `collections` object to register your collection(s)

@@ -4,7 +4,6 @@ import challenge from "../../assets/img/challenge.jpg"
 import { Image } from "astro:assets"
 import { getCollection } from "astro:content";
 const allChallenges = await getCollection("challenges");
-console.log({allChallenges})
 const challenges=[
 	{title:'Announcement Bar', handle:'post-1', description:"This project is a great all-around test. You'll need good HTML to ensure accessible navigation. There are many tricky CSS details, and the game logic will test your JS.", level:1, stack:['html', 'css', 'javascript'], img: challenge},
 	{title:'Upsell Carousel', handle:'upsell_carousel', description:"This project is a great all-around test. You'll need good HTML to ensure accessible navigation. There are many tricky CSS details, and the game logic will test your JS.", level:1, stack:['html', 'css', 'javascript'], img: challenge},
@@ -25,13 +24,11 @@ const challenges=[
 					<div class="py-2 ">
 						<h3 class="text-2xl font-semibold mb-2"><a href={`/challenges/${item.slug}/`} class="text-slate-800 border-b-2 border-transparent hover:border-slate-950 hover:text-950 cursor-pointer transition-all duration-300">{item.data.title}</a></h3>
 						<div class="flex justify-between mb-2">
-							<!-- 
 						<ul class="flex space-x-2 ">
 							{item.data.stack.map(tech=>(
 								<li>{tech}</li>
 							))}
-						</ul>-->
-						<span>{item.data.author}</span>
+						</ul>
 						</div>
 						<h4>{item.data.description}</h4>
 					</div>

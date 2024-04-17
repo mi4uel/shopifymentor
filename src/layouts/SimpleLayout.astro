@@ -23,7 +23,7 @@ const menu=[
                 <div><a href="/" class="text-2xl font-semibold">Shopify Mentor</a></div>
                 <ul class="flex space-x-4">
                     {menu.map(({link, label})=>(
-                      <li><a href={link} class={`${label.includes('login') ? 'bg-slate-800 py-2 px-4 rounded text-teal-50' :'' } capitalize text-sm font-semibold`}>{label}</a></li>  
+                      <li><a href={'/' + link} class={`${label.includes('login') ? 'bg-slate-800 py-2 px-4 rounded text-teal-50' :'' } capitalize text-sm font-semibold`}>{label}</a></li>  
                     ))}
                     
                 </ul>
