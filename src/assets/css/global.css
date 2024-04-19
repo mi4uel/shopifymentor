@@ -9,7 +9,8 @@
 section {
   @apply pt-16 pb-4;
 }
-.mv-description-list li {
+.mv-description-list li,
+.faq-answer {
   @apply hidden;
 }
 .mv-list-labels label {
@@ -21,12 +22,14 @@ section {
 #choose:checked ~ .mv-description-list .choose-description,
 #code:checked ~ .mv-description-list .code-description,
 #submit:checked ~ .mv-description-list .submit-description,
-#certify:checked ~ .mv-description-list .certify-description {
+#certify:checked ~ .mv-description-list .certify-description,
+.faq-input:checked ~ .faq-answer {
   @apply block;
 }
 #choose:checked ~ .mv-list-labels .choose-label label,
 #code:checked ~ .mv-list-labels .code-label label,
 #submit:checked ~ .mv-list-labels .submit-label label,
-#certify:checked ~ .mv-list-labels .certify-label label {
+#certify:checked ~ .mv-list-labels .certify-label label,
+.faq-input:checked ~ .faq-label {
   @apply bg-blue-500 text-slate-100 border-blue-600;
 }

@@ -1,39 +1,98 @@
 ---
-import '../assets/css/global.css'
+import { Image } from "astro:assets";
+import "../assets/css/global.css";
+import githubIcon from '../assets/img/github.svg'
 
-const menu=[
-    {link:'learning_paths', label:'learning paths'},
-    {link:'challenges', label:'challenges'},
-    {link:'solutions', label:'solutions'},
-    {link:'login', label:'login with github'}
-]
+console.log(githubIcon)
+
+const menu = [
+  { link: "challenges", label: "challenges" },
+  { link: "solutions", label: "solutions" },
+  { link: "login", label: "login with github" },
+];
+const faqs = [
+  {
+    question: "Is it free?",
+    answer:
+      "The majority of our challenges are free, yes. We do have some that are premium and require a Pro subscription to access. It will say on each challenge whether they are free or premium, so it's easy to tell the difference.",
+  },
+  {
+    question: "Can I use these projects in my portfolio?",
+    answer:
+      "Definitely! Please do feel free to use whatever you build in your portfolio. Helping developers add professional-looking projects to their portfolio was one of the reasons we created this platform!",
+  },
+  {
+    question: "Can I take the challenges as a beginner?",
+    answer:
+      "You can see all of our challenges here. To start a challenge, click the 'Start Challenge' button on the challenge page. This will take you to the Challenge Hub, where you can download the starter files, including a README file which will help you get set up. We'd recommend starting with one of our newbie level challenges. You can then work your way up from there.",
+  },
+  {
+    question: "How can I get help if I'm stuck on a challenge?",
+    answer:
+      "The best (and quickest) way to get help on a challenge is in our Discord server. There are thousands of other developers in there, so it's a great place to ask questions. We even have a dedicated 'help' channel! If you haven't joined yet, you can get an invite to our Discord server here.",
+  },
+  {
+    question: "Can I use libraries/frameworks on these projects?",
+    answer:
+      "Yes! Our challenges provide professional designs but there are no rules on what tools to use. So feel free to use anything you like to build your projects.",
+  },
+  {
+    question: "Am I guaranteed to get hired through the Hiring Platform?",
+    answer:
+      "We can’t offer any guarantees, unfortunately. You can showcase your skills and knowledge to recruiters on our Hiring Platform by completing challenges and engaging with the community. This may lead to job opportunities, but it also may not. We still recommend applying for jobs using traditional channels like job boards.",
+  },
+];
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Shopify Mentor</title>
-	</head>
-	<body>
-		<header>
-            <nav class="mv-wrapper flex justify-between items-center py-4">
-                <div><a href="/" class="text-2xl font-semibold">Shopify Mentor</a></div>
-                <ul class="flex space-x-4">
-                    {menu.map(({link, label})=>(
-                      <li><a href={'/' + link} class={`${label.includes('login') ? 'bg-slate-800 py-2 px-4 rounded text-teal-50' :'' } capitalize text-sm font-semibold`}>{label}</a></li>  
-                    ))}
-                    
-                </ul>
-            </nav>
-        </header>
-        <slot/>
-        <footer class="mt-auto bottom-0">
-            <div class="mv-wrapper py-8">
-                <p class="text-slate-600 text-center">&copy; Shopify Mentor</p>
-            </div>
-        </footer>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Shopify Mentor</title>
+  </head>
+  <body>
+    <header>
+      <nav class="mv-wrapper flex justify-between items-center py-4">
+        <div><a href="/" class="text-2xl font-semibold">Shopify Mentor</a></div>
+        <ul class="flex space-x-4 items-center">
+          {
+            menu.map(({ link, label }) => (
+              <li>
+                <a
+                  href={"/" + link}
+                  class={`${label.includes("login") ? "bg-slate-800 py-2 px-4 rounded text-teal-50" : ""} capitalize text-sm font-semibold flex space-x-4 items-center`}
+                >
+                  {label.includes("login") && <svg width="24px" height="24px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>github [#142]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#fff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"> </path> </g> </g> </g> </g></svg>} {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </header>
+    <slot />
+    <section>
+      <h2 class="mv-wrapper text-2xl font-semibold mb-4">Faq's</h2>
+      <article class="mv-wrapper">
+        <ul class="flex flex-col space-y-4">
+          {
+            faqs.map((item, index) => (
+              <li>
+                <input type="checkbox" name="faq" class="faq-input" hidden id={item.question}/>
+                <label for={item.question} class="faq-label font-semibold text-lg py-2 border-2 bg-slate-100 border-slate-200 w-full block rounded px-4  cursor-pointer">{item.question}</label>
+                <div class="faq-answer py-2 px-4 my-2 border-2 border-slate-300 rounded transition-all duration-300">{item.answer}</div>
+              </li>
+            ))
+          }
+        </ul>
+      </article>
+    </section>
+    <footer class="mt-auto bottom-0">
+      <div class="mv-wrapper py-8">
+        <p class="text-slate-600 text-center">&copy; Shopify Mentor</p>
+      </div>
+    </footer>
+  </body>
 </html>
