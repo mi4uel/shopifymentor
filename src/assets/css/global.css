@@ -4,10 +4,10 @@
   font-family: "Onest", "Poppins";
 }
 .mv-wrapper {
-  @apply container mx-auto px-8 max-w-[960px];
+  @apply container mx-auto px-8 max-w-[1440px];
 }
 section {
-  @apply pt-16 pb-4;
+  @apply pt-16 pb-4 w-2/3;
 }
 .mv-description-list li,
 .faq-answer {

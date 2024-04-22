@@ -7,30 +7,27 @@ const img = frontmatter.image.url
 <section>
 
 
-<article class="mv-wrapper grid grid-cols-2 gap-4 items-center">
-  <div>
+<article class="mv-wrapper flex flex-col space-y-4 items-center">
+  <div class="w-full">
     <ul class="flex space-x-2 font-semibold mb-2">
         {frontmatter.stack.map((item:string)=>(
             <li>{item}</li>
         ))}
     </ul>
     <h1 class="text-2xl mb-2 font-semibold">{frontmatter.title}</h1>
-    <p class="mb-2">Level {frontmatter.level}</p>
-    <p class="mb-8">{frontmatter.description}</p>
-    <a href="" class="bg-blue-500 text-slate-100 border-blue-600 border-2 rounded py-2 px-4">Start Challenge</a>
-    
+    <h3>{new Date(frontmatter.pubDate).toLocaleString('en-US', { timeZoneName: 'short' })}</h3>
   </div>
-  <figure>
+  <figure class="bg-slate-100 w-full max-h-[400px] overflow-hidden">
     <Image
       src={img}
       loading="lazy"
       height={400}
       width={400}
+      class="w-full object-cover"
       alt={frontmatter.title}
     />
   </figure>
   <div class="col-span-2">
-    <h2 class="font-semibold text-xl mb-4">Brief</h2>
     <slot />  
   </div>
 </article>

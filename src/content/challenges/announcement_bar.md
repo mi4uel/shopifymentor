@@ -5,28 +5,33 @@ pubDate: 2022-07-01
 description: "This project is a great all-around test. You'll need good HTML to ensure accessible navigation. There are many tricky CSS details, and the game logic will test your JS."
 level: 1
 image:
-    url: 'https://i.postimg.cc/5NPBxq1G/image.png'
+    url: 'https://i.postimg.cc/ncQjW4x3/Websummit.png'
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
 stack: ["html", "css", "javascript", "liquid"]
 ---
 
-Your challenge is to build out this Hangman game and get it looking as close to the design as possible.
+El announcement bar es una herramienta visual muy potente dentre de una tienda virtual, ya que provee información importante para el usuario como descuentos, envios gratis, nuevos productos, etc.
 
-You can use any tools you like to help you complete the challenge. So, if you've got something you'd like to practice, feel free to give it a go.
+En este articulo te voy a mostrar como crear un announcement bar desde cero para tu tienda de Shopify. Para ello utilizaremos lo siguiente:
+Editor de codigo (en mi caso Visual Studio Code)
+Html
+Css
+Javascript
+Liquid
 
-We provide the data in a local data.json file for you to use for word selections.
+Tenemos dos opciones para empezar a modificar el codigo:
+Duplicar el theme actual, descargarlo, editarlo y subirlo
+Conectar mi theme a una cuenta de github, crear una rama nueva donde escribiremos el codigo, subir los cambios y hacer un pull request
 
-Your users should be able to:
+En el caso nro 1, debemos ir al admin->themes, duplicar el theme, descargarlo. Una vez descargado, lo abrimos en nuestro editor de codigo
+En el caso nro 2, abrimos nuestra terminal, hacemos git clone y la url de nuestro repositorio, y abrimos la carpeto en nuestro editor de codigo. Una vez realizado esto, abrimos la terminal de VSC, y creamos una nueva rama llamada feature/announcement-bar.
+Para crear esta rama necesitamos dos comandos de Git
+1 git branch feature/announcement-bar
+2 git switch feature/announcement-bar
 
-Learn how to play Hangman from the main menu.
-Start a game and choose a category.
-Play Hangman with a random word selected from that category.
-See their current health decrease based on incorrect letter guesses.
-Win the game if they complete the whole word.
-Lose the game if they make eight wrong guesses.
-Pause the game and choose to continue, pick a new category, or quit.
-View the optimal layout for the interface depending on their device's screen size.
-See hover and focus states for all interactive elements on the page.
-Navigate the entire game only using their keyboard.
-Download the project and go through the README.md file. This will provide further details about the project and help you get set up.
+Para confirmar que estamos en nuestra nueva rama, en la terminal escribimos git branch y deberia retornar nuestra nueva rama
+
+Codigo fuente:
+ 1 Vamos a crear 3 archivos, el primero 'announcement-bar.liquid' dentro de la carpeta sections, el segundo 'section-announcement-bar.css' y el ultimo 'announcement-bar.js', ambos dentro de la carpeta assets
+ 
