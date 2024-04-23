@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ChallengeLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: '¿Qué es un metaobject?'
 pubDate: 2024-04-21
 description: "Los Metaobjects en Shopify permiten a los comerciantes almacenar información personalizada y gestionar relaciones entre entidades en su tienda en línea."

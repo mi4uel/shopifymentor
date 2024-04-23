@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ChallengeLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: 'View Transitions'
 pubDate: 2024-04-18
 description: 'This project is a great all-around test'

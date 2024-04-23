@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ChallengeLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: 'Speculation rule API'
 pubDate: 2024-04-20
 description: "La prerrenderización de páginas anticipa y carga páginas automáticamente, mejorando la velocidad de carga y la experiencia del usuario al reducir los tiempos de espera."

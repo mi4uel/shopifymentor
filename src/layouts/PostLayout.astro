@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import SocialShare from "../components/SocialShare.astro";
 
 const { frontmatter } = Astro.props;
 const img = frontmatter.image.url
@@ -30,5 +31,6 @@ const img = frontmatter.image.url
   <div class="col-span-2">
     <slot />  
   </div>
+  <SocialShare/>
 </article>
 </section>

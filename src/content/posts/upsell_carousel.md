@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ChallengeLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: 'Upsell Carousel'
 pubDate: 2024-04-19
 description: 'This project is a great all-around test'

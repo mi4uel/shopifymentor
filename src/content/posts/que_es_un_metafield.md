@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ChallengeLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: '¿Qué es un metafield?'
 pubDate: 2024-04-22
 description: "Los metafields en Shopify son campos personalizados para almacenar información específica en productos, clientes y más. Son esenciales para la personalización y gestión eficiente de la tienda en línea."

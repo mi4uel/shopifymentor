@@ -1,0 +1,21 @@
+---
+import { getShareUrl } from '../utils/share'
+import Icon from './Icon.astro'
+const socialShare = [
+    {id:'facebook', color:'#000'},
+    {id:'twitter', color:'#000'},
+    {id:'linkedin', color:'#000'},
+    {id:'pinterest', color:'#000'}
+]
+---
+
+<ul class="flex space-x-4 w-full">
+    {socialShare.map((item) => (
+        <li>
+            <a href={getShareUrl(`${item.id}`, `${Astro.url}`, 'Check out this blog post!')} target="_blank" rel="noopener">
+                <Icon id={item.id} size="26" color={item.color}/>
+            </a>
+        </li>     
+    ) 
+    )}   
+</ul>
