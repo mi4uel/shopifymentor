@@ -7,7 +7,7 @@ level: 1
 image:
     url: 'https://i.postimg.cc/5NPBxq1G/image.png'
     alt: 'The full Astro logo.'
-tags: ["astro", "blogging", "learning in public"]
+tags: []
 stack: ["html", "css", "javascript", "liquid"]
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/ChallengeLayout.astro
 title: 'Announcement Bar'
-pubDate: 2022-07-01
+pubDate: 2024-04-17
 description: "This project is a great all-around test. You'll need good HTML to ensure accessible navigation. There are many tricky CSS details, and the game logic will test your JS."
 level: 1
 image:
     url: 'https://i.postimg.cc/ncQjW4x3/Websummit.png'
     alt: 'The full Astro logo.'
-tags: ["astro", "blogging", "learning in public"]
+tags: []
 stack: ["html", "css", "javascript", "liquid"]
 ---
 

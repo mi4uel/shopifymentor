@@ -1,0 +1,27 @@
+---
+import Image from "astro/components/Image.astro"
+
+const {post} = Astro.props
+const {sidebar} = Astro.props
+
+const classes = sidebar ? 'w-3/4' : 'w-full'
+
+---
+
+
+<div class={` ${ classes } p-2 border-2 rounded border-slate-200 bg-slate-50 shrink-0`}>
+    <figure class="bg-slate-500 rounded shadow overflow-hidden mb-2 max-h-[200px] flex items-center">
+    <Image src={post.data.image.url} loading="lazy" height={200} width={300} alt={post.data.title} class="w-full h-full object-cover object-center"/>	
+    </figure>
+    <div class="py-2 ">
+        <h3 class={` ${ sidebar ? 'text-lg' : 'text-2xl mb-2'} font-semibold `}><a href={`/posts/${post.slug}/`} class="text-slate-800 border-b-2 border-transparent hover:border-slate-950 hover:text-950 cursor-pointer transition-all duration-300">{post.data.title}</a></h3>
+        {!sidebar && <div class="flex justify-between mb-2">
+        <ul class="flex space-x-2 ">
+            {post.data.stack.map(tech=>(
+                <li class="text-sm text-slate-400">{tech}</li>
+            ))}
+        </ul>
+        </div>
+         <h4>{post.data.description}</h4>}        
+    </div>
+</div>
