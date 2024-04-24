@@ -33,3 +33,42 @@ section {
 .faq-input:checked ~ .faq-label {
   @apply bg-blue-500 text-slate-100 border-blue-600;
 }
+
+/* clears the ‘X’ from Internet Explorer */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  margin: 10px auto;
+  border: 6px solid lightgray;
+  border-left: 6px solid lightseagreen;
+  animation: spin 1s ease infinite;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
