@@ -7,7 +7,7 @@
   @apply container mx-auto px-8 max-w-[1440px];
 }
 section {
-  @apply pt-16 pb-4 w-2/3;
+  @apply pt-4 md:pt-16 pb-4 w-full md:w-2/3;
 }
 .mv-description-list li,
 .faq-answer {

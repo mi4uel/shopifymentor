@@ -5,11 +5,27 @@ import SocialShare from "../components/SocialShare.astro";
 const { frontmatter } = Astro.props;
 const img = frontmatter.image.url
 ---
+<style is:inline>
+  .post-content ul, .post-content ol{
+    padding: 10px;
+    list-style: unset;
+    margin: 5px 10px;
+  }
+  .post-content ul li, .post-content ol li{
+    margin-bottom: 10px;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+  h1,h2,h3,h4,h5,h6{
+    margin-top: 10px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+</style>
 <section>
-
-
 <article class=" flex flex-col space-y-4 items-center">
-  <div class="w-full mb-8">
+  <div class="w-full mb-4 md:mb-8">
     <figure class="bg-slate-100 w-full max-h-[400px] overflow-hidden rounded-lg">
       <Image
         src={img}
@@ -29,7 +45,7 @@ const img = frontmatter.image.url
     <h3>{new Date(frontmatter.pubDate).toLocaleString('en-US', { timeZoneName: 'short' })}</h3>
   </div>
   
-  <div class="col-span-2 mt-8">
+  <div class="col-span-2 mt-8 post-content">
     <slot />  
   </div>
   <SocialShare/>
