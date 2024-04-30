@@ -8,6 +8,7 @@ export default defineConfig({
   integrations: [tailwind()],
   image: {
     service: passthroughImageService(),
+    remotePatterns: [{ protocol: "https" }],
   },
   output: 'server',
   adapter: netlify(),
