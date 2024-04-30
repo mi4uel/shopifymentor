@@ -33,7 +33,7 @@ const featuredPosts = allPosts.filter((item) => {
 
     <script>
       class SearchInput extends HTMLElement {
-        posts: [] | undefined;
+        posts: any[] | undefined; 
         container: HTMLElement | null;
         heading: HTMLElement | null;
         input: HTMLInputElement | null;
@@ -70,7 +70,7 @@ const featuredPosts = allPosts.filter((item) => {
         }
 
         handleInput() {
-          if (this.input?.value?.length > 2) {
+          if (this.input && this.input.value && this.input.value.length > 2) {
             this.showResultsBox();
             const searchResults = this.posts?.filter((post) =>
               post?.data?.title.toLowerCase().includes(this.input?.value)
@@ -81,7 +81,7 @@ const featuredPosts = allPosts.filter((item) => {
                 let stacks = "";
                 {
                   post.data.stack.map(
-                    (tech) =>
+                    (tech:string) =>
                       (stacks += `<li class="text-sm text-slate-400">${tech}</li>`)
                   );
                 }

@@ -70,7 +70,7 @@ const {posts} = Astro.props
         <h3 class="font-semibold text-xl">Post populares</h3>
         <ul class="flex mt-4 overflow-x-auto space-x-4 pb-4">
           {
-            posts.map((post) => (
+            posts.map((post:{}) => (
               <PostCard post={post} sidebar={true} />
             ))
           }
