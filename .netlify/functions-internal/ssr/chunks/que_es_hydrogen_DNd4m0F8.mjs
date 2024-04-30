@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./que_es_hydrogen_b7_Pjba5.mjs');
+						return import('./que_es_hydrogen_lh7fw0pJ.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

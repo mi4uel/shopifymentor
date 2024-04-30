@@ -1,5 +1,5 @@
 import { d as createAstro, e as createComponent, r as renderTemplate, m as maybeRenderHead, g as addAttribute, l as renderComponent, o as renderSlot } from './astro_BehGrcX4.mjs';
-import { c as $$Image } from './pages/__BX4OidK2.mjs';
+import { c as $$Image } from './pages/__C5p8aG7B.mjs';
 
 function getShareUrl(platform, url, description) {
   let shareUrl = "";

@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./que_es_un_metaobject_D99KSr_w.mjs');
+						return import('./que_es_un_metaobject_3D62TEOV.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

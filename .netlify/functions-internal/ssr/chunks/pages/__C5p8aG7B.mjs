@@ -978,7 +978,7 @@ const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
   })} <img${addAttribute(fallbackImage.src, "src")}${spreadAttributes(imgAdditionalAttributes)}${spreadAttributes(fallbackImage.attributes)}> </picture>`;
 }, "/home/mi4uel/Desktop/shopifyMentor.com/node_modules/.pnpm/astro@4.6.1_typescript@5.4.5/node_modules/astro/components/Picture.astro", void 0);
 
-const imageConfig = {"service":{"entrypoint":"astro/assets/services/noop","config":{}},"domains":[],"remotePatterns":[]};
+const imageConfig = {"service":{"entrypoint":"astro/assets/services/noop","config":{}},"domains":[],"remotePatterns":[{"protocol":"https"}]};
 					const getImage = async (options) => await getImage$1(options, imageConfig);
 
 /*
@@ -1300,7 +1300,7 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"posts":{"type":"content","entries":{"que_es_hydrogen":"/src/content/posts/que_es_hydrogen.md","que_es_un_metafield":"/src/content/posts/que_es_un_metafield.md","que_es_un_metaobject":"/src/content/posts/que_es_un_metaobject.md"}}};
+lookupMap = {"posts":{"type":"content","entries":{"que_es_un_metafield":"/src/content/posts/que_es_un_metafield.md","que_es_hydrogen":"/src/content/posts/que_es_hydrogen.md","que_es_un_metaobject":"/src/content/posts/que_es_un_metaobject.md"}}};
 
 function createGlobLookup(glob) {
 	return async (collection, lookupId) => {
@@ -1311,7 +1311,7 @@ function createGlobLookup(glob) {
 	};
 }
 
-const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/posts/que_es_hydrogen.md": () => import('../que_es_hydrogen_BAUeL0GG.mjs'),"/src/content/posts/que_es_un_metafield.md": () => import('../que_es_un_metafield_Cd7qdTPt.mjs'),"/src/content/posts/que_es_un_metaobject.md": () => import('../que_es_un_metaobject_HApz6mtR.mjs')});
+const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/posts/que_es_hydrogen.md": () => import('../que_es_hydrogen_DNd4m0F8.mjs'),"/src/content/posts/que_es_un_metafield.md": () => import('../que_es_un_metafield_BLV9u7vt.mjs'),"/src/content/posts/que_es_un_metaobject.md": () => import('../que_es_un_metaobject_DQfFwpWi.mjs')});
 const collectionToRenderEntryMap = createCollectionToGlobResultMap({
 	globResult: renderEntryGlob,
 	contentDir,

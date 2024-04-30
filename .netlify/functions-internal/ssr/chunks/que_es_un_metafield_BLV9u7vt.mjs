@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./que_es_un_metafield_BHmcxwQg.mjs');
+						return import('./que_es_un_metafield_BEltsuRt.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

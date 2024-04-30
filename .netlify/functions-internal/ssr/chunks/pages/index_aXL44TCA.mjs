@@ -1,6 +1,6 @@
 /* empty css                          */
 import { d as createAstro, e as createComponent, r as renderTemplate, l as renderComponent, m as maybeRenderHead } from '../astro_BehGrcX4.mjs';
-import { a as getCollection, $ as $$PostCard, b as $$SimpleLayout } from './__BX4OidK2.mjs';
+import { a as getCollection, $ as $$PostCard, b as $$SimpleLayout } from './__C5p8aG7B.mjs';
 
 const $$Astro = createAstro();
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {

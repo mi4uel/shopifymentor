@@ -1,6 +1,6 @@
 import { c as isRemotePath, d as isRemoteAllowed } from '../astro/assets-service_D7rzJ8j9.mjs';
 import { p as getDefaultExportFromCjs } from '../astro_BehGrcX4.mjs';
-import { g as getConfiguredImageService, i as imageConfig } from './__BX4OidK2.mjs';
+import { g as getConfiguredImageService, i as imageConfig } from './__C5p8aG7B.mjs';
 
 /**
  * @param typeMap [Object] Map of MIME type -> Array[extensions]
